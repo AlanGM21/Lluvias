@@ -1,0 +1,88 @@
+ Matriz de clase :
+    def  __init__ ( self , n ):
+        auto .__ n = n
+        self .__ arreglo = []
+        para i en  rango ( 0 , n, 1 ):
+            self .__ arreglo.append ( 0 )
+     longitud def ( auto ):
+        volver a  sí mismo .__ n
+    def  get_item ( self , index ):
+        return  self .__ arreglo [índice]
+    def  set_item ( self , index , value ):
+        self .__ arreglo [index] = value
+    def  claro ( auto , valor ):
+        para i en  rango ( 0 , self .__ n, 1 ):
+            self .__ arreglo [i] = value
+
+    def  to_string ( self ):
+        print ( f " Tamaño del arreglo = { self .__ n } " )
+        print ( self .__ arreglo)
+
+# Arreglo de 2 dimensiones
+clase  Array2D :
+    def  __init__ ( self , filas , cols ):
+        self .__ filas = filas
+        self .__ cols = cols
+        self .__ arreglo = []
+        para r en  rango ( self .__ filas):
+            tmp = []
+            para c en  rango ( auto .__ cols):
+                tmp.append ( 0 )
+            self .__ arreglo.append (tmp)
+    def  to_string ( self ):
+        para ren en  sí mismo .__ arreglo:
+            impresión (es)
+
+    def  get_num_rous ( self ):
+        return  self .__ filas
+
+    def  get_num_cols ( self ):
+        return  self .__ cols
+
+    def  set_item ( self , filas , cols , valor ):
+        self .__ arreglo [filas] [cols] = valor
+
+    def  get_item ( self , filas , cols ):
+        return  self .__ arreglo [filas] [cols]
+
+    def  claro ( auto , valor ):
+        para i en  rango ( self .__ filas):
+            para j en  rango ( self .__ cols):
+                self .__ arreglo [i] [j] = valor
+
+clase  Array3D :
+    def  __init__ ( self , profundidad , filas , cols ):
+        auto .__ profundidad = profundidad
+        self .__ cols = cols
+        self .__ filas = filas
+        self .__ arreglo = [[[ 0  para j en  rango (cols)] para i en  rango (filas)] para k en  rango (profundidad)]
+
+        
+    def  get_num_depth ( self ):
+        volver a  sí mismo .__ profundidad
+    def  get_num_rows ( self ):
+        return  self .__ filas
+    def  get_num_cols ( self ):
+        return  self .__ cols
+    def  set_item ( self , profundidad , filas , cols , valor ):
+        self .__ arreglo [profundidad] [filas] [cols] = valor
+    def  get_item ( self , profundidad , filas , cols ):
+        return  self .__ arreglo [profundidad] [filas] [cols]
+    def  clearinf ( auto , valor ):
+        para i en  rango ( auto .__ profundidad):
+            para j en  rango ( self .__ filas):
+                para k en  rango ( auto .__ cols):
+                    self .__ arreglo [i] [j] [k] = valor
+    def  to_string ( self ):
+        capa = 0
+        para capa en  sí mismo .__ arreglo:
+            print ( f " --- Capa { capa } --- " )
+            para ren en capa:
+                impresión (es)
+            capa + = 1
+            
+
+def  main ():
+    a = Array3D ( 3 , 2 , 3 )
+    a.to_string ()
+principal()
